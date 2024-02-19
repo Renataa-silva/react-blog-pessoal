@@ -1,4 +1,4 @@
-import homeLogo from '../../assets/img/transferir.jpg'
+import homeLogo from '../../assets/img/home.png'
 import './Home.css';
 
 
