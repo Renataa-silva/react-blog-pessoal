@@ -1,13 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
-import { AuthContext } from '../../../contexts/AuthContext'
 import Tema from '../../../models/Tema'
 import { buscar, deletar } from '../../../services/Service'
+import { AuthContext } from '../../../contexts/AuthContext'
 
 function DeletarTema() {
     const [tema, setTema] = useState<Tema>({} as Tema)
 
-    let navigate = useNavigate()
+    const navigate = useNavigate()
 
     const { id } = useParams<{ id: string }>()
 
