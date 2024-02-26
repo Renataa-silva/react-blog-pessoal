@@ -7,7 +7,7 @@ import { AuthContext } from '../../../contexts/AuthContext'
 function DeletarTema() {
     const [tema, setTema] = useState<Tema>({} as Tema)
 
-    const navigate = useNavigate()
+    let navigate = useNavigate()
 
     const { id } = useParams<{ id: string }>()
 
