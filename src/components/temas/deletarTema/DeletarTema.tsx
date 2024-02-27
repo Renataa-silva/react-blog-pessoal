@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router'
 import Tema from '../../../models/Tema'
 import { buscar, deletar } from '../../../services/Service'
 import { AuthContext } from '../../../contexts/AuthContext'
+import { toastAlerta } from '../../../util/toastAlesta'
 
 function DeletarTema() {
     const [tema, setTema] = useState<Tema>({} as Tema)
@@ -54,10 +55,10 @@ function DeletarTema() {
                 }
             })
 
-            alert('Tema apagado com sucesso')
+            toastAlerta('Tema apagado com sucesso', 'sucesso')
 
         } catch (error) {
-            alert('Erro ao apagar o Tema')
+            toastAlerta('Erro ao apagar o Tema', 'erro')
         }
 
         retornar()
